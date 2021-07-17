@@ -1,6 +1,5 @@
 <h1 class="dog-index-title">Dogs</h1>
 
-<a href="<%= dogs_url %>">
 <div class="dog-index-container">
   <% @dogs.each do |dog| %>
     <div class="dog-list">
@@ -9,8 +8,7 @@
     </div>
   <% end %>
 </div>
-</a>
-<br>
+
 <div class="new-dog">
-<%= link_to 'New Dog', new_dog_path, class: "new-dog-link" %>
+  <%= link_to 'New Dog', new_dog_path, class: "new-dog-link" %>
 </div>
