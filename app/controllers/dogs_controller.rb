@@ -24,6 +24,7 @@ class DogsController < ApplicationController
   # POST /dogs or /dogs.json
   def create
     @dog = Dog.new(dog_params)
+    @dog.is_metric = params[:units] == "kilograms"
 
     respond_to do |format|
       if @dog.save

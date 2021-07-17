@@ -26,9 +26,29 @@
     <%= form.text_field :breed, class: 'input' %>
   </div>
 
-  <div class="field">
+  <div class="field-label is-normal" style="text-align: left;">
     <%= form.label :current_weight %>
-    <%= form.text_field :current_weight, class: 'input' %>
+  </div>
+
+  <div class="field is-horizontal">
+    <div class="field-body">
+      <div class="field">
+        <p class="control is-expanded">
+          <%= form.text_field :current_weight, class: 'input' %>
+        </p>
+      </div>
+
+      <div class="field">
+        <div class="control is-expanded">
+          <div class="select" style="width: 100%">
+            <select name="units" style="width: 100%">
+              <option value="pounds">pounds</option>
+              <option value="kilograms">kilograms</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="field">
