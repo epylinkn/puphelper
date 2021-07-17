@@ -1,0 +1,14 @@
+<h1 class="dog-index-title">Dogs</h1>
+
+<div class="dog-index-container">
+  <% @dogs.each do |dog| %>
+    <div class="dog-list">
+      <%= image_tag 'nana.png' %>
+      <p class="dog-show-link"><%= link_to dog.name, dog %></p>
+    </div>
+  <% end %>
+</div>
+
+<div class="new-dog">
+  <%= link_to 'New Dog', new_dog_path, class: "new-dog-link" %>
+</div>
