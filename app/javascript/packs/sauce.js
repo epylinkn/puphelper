@@ -3,5 +3,5 @@ import { render } from "react-dom";
 import DogRoot from "../components/DogRoot";
 
 document.addEventListener("DOMContentLoaded", () => {
-  render(<DogRoot />, document.body.appendChild(document.createElement("div")));
+  render(<DogRoot />, document.getElementById('sauceindex'));
 });

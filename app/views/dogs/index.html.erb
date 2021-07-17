@@ -1,14 +1,25 @@
-<h1 class="dog-index-title">Dogs</h1>
+<%= javascript_pack_tag 'sauce' %>
 
-<div class="dog-index-container">
-  <% @dogs.each do |dog| %>
-    <div class="dog-list">
-      <%= image_tag 'nana.png' %>
-      <p class="dog-show-link"><%= link_to dog.name, dog %></p>
-    </div>
-  <% end %>
+<div class="container">
+  <h1 class="dog-index-title">Dogs (REACT)</h1>
+
+  <div id="sauceindex">REACT IS NOT WORKING</div>
 </div>
 
-<div class="new-dog">
-  <%= link_to 'New Dog', new_dog_path, class: "new-dog-link" %>
+<hr>
+
+<div class="container">
+  <h1 class="dog-index-title">Dogs (NON-REACT)</h1>
+
+  <div class="dog-index-container">
+    <% @dogs.each do |dog| %>
+      <div class="dog-list">
+        <p class="dog-show-link"><%= link_to dog.name, dog %></p>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="new-dog">
+    <%= link_to 'New Dog', new_dog_path, class: "new-dog-link" %>
+  </div>
 </div>

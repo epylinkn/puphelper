@@ -2,7 +2,7 @@ class Api::V1::DogsController < ApplicationController
   before_action :set_dog, only: [:show, :edit, :update, :destroy]
 
   def index
-    @dogs = dog.all.order(name: :asc)
+    @dogs = Dog.all.order(name: :asc)
     render json: @dogs
   end
 
